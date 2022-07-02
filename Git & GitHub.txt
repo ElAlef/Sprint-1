@@ -1,0 +1,115 @@
+GitHub es un servidor remoto que permite subir repositorios de código para almacenarlo en el sistema de control de versiones Git.
+
+¿Cómo funciona git?
+
+1. Crear un "repositorio" (proyecto) con una herramienta de alojamiento de Git (por ejemplo, Git Hub)
+2. Copia (o clona) el repositorio a tu máquina local
+3. Añade un archivo a tu repositorio local y confirma ("commit") los cambios
+4. Envía ("push") los cambios a la rama principal
+5. Haz cambios en tu archivo con una herramienta de alojamiento de Git y confírmalos
+6. Extrae ("pull") los cambios a tu máquina local
+7. Crea una rama ("branch", versión), haz algún cambio y confírmalo
+8. Abre una solicitud de incorporación de cambios ("pull request": propón cambios a la rama principal)
+9. Fusiona ("merge") tu rama con la rama principal
+
+Configuracion general de Git
+
+CONFIGURAR NOMBRE
+1) git config --global user.name +"NOMBRE PERSONAL"
+
+CONFIGURAR E-MAIL
+2) git config --globa user.email +dirrecion de email
+
+CONFIGURAR EDITOR DE CODIGO
+3) git config --global core.editor "code --wait" (espera hasta abrir el editor)
+4) git config --global -e (abre el editor por defecto y una vez que se cierra, se asigna la configuración)
+
+CONFIGURAR COMO GIT INTERACTUA CON LOS ARCHIVOS
+5) git config --global core.autocrlf true (en windows) o git config --global core.autocrlf input (en mac o linux)
+
+
+COMANDOS DE NAVEGACIÓN DENTRO DE LA TERMINAL
+
+* ls (lista todas las carpetas que hay donde estoy trabajando)
+
+* pw (me ubica en donde me encuentro)
+
+* cd + nombre la carpeta (me mueve a la carpeta que escribo)
+
+* pwd (muestra mi nueva ubicación)
+
+* cd .. (sale de la carpeta y me vuelve al lugar anterior)
+
+* mkdir (crea una nueva carpeta) luego con cd ingreso a la nueva carpeta.
+
+* git init (inicializa un repositorio vacio) si la direccion en consola aparece con .git al final, esta oculto
+
+* ls -a (hace visible el nuevo repositorio).
+
+* cd .git (abre el nuevo repo)
+
+* ls -a (muestra todos los archivo que utiliza git para poder gestionar nuestros proyectos)
+
+* cd .. (me regresa a la carpeta donde estoy trabajando)
+
+
+ETAPAS o FLUJO DE TRABAJO
+
+* LOCAL: etapa de trabajo en la computadora personal de cada participante, se puede modificar, crear o agregar o eliminar archivos.
+
+se agregan con git add (selecciona los archivos que queramos para a stage)
+
+* STAGE: etapa intermedia para verificar cuales son los cambios que nosotros efectuamos antes de pasar al repositorio. no se ve reflejado en el repositorio. Solo pasan los cambios que seleccionamos.
+se agrega con git commit
+
+* COMMIT
+los cambios que queremos subir al servidor remoto (GitHub) desde esta etapa usamos el comando git push.
+
+
+COMANDOS IMPORTANTES
+Los siguientes comandos se ejecutan trabajando de forma local (GitBash)
+
+* clear (comando que se utiliza para limpiar el Terminal / Git Bash. Simplemente colocan “clear” y todo lo que tienen allí desaparecerá PERO continuarán en la carpeta/archivo en el que se encuentren al momento de ejecutar ese comando)
+
+* git status (comando que muestra el estado del directorio de trabajo y del área del entorno de ensayo. Permite ver los cambios que se han preparado, los que no y los archivos en los que Git no va a realizar el seguimiento. El resultado del estado no muestra ninguna información relativa al historial del proyecto)
+
+* git staus -s (solo muestra los archivos o cambios/modificaciones, pero ignora toda la informacion del contexto, presuponiendo que ya lo sabemos con anterioridad)
+
+* git add (comando para añadir un cambio en el directorio de trabajo en el entorno de ensayo. De este modo, se indica a Git que quieres incluir actualizaciones en un archivo concreto en la próxima confirmación.
+
+* git commit (comando para capturar una instantánea de los cambios preparados en ese momento del proyecto. Las instantáneas confirmadas pueden considerarse como versiones "seguras" de un proyecto: Git no las cambiará nunca a no ser que se lo pidas expresamente)
+
+* git diff (comando que se ejecuta para establecer las diferencias en los orígenes de datos de Git. Dichos orígenes de datos pueden ser confirmaciones, ramas y archivos, entre otras posibilidades)
+
+* git diff --stage (solo muestra los cambios que se encuentran en la etapa de stage, listo para commit)
+
+* git log (comando que podemos usar para ver el historial de commits, estando situados en la carpeta de nuestro proyecto)
+
+* git log --oneline (muestra un resumen del historial)
+
+* git push (comando que se usa para cargar contenido del repositorio local a un repositorio remoto. El envío es la forma de transferir confirmaciones desde tu repositorio local a un repositorio remoto)
+
+* git pull (comando para extraer y descargar contenido desde un repositorio remoto y actualizar al instante el repositorio local para reflejar ese contenido)
+
+* git branch (comando que indica en que rama estamos trabajando, luego de crear una nueva rama, al ejecutarlo, nos confirma en que rama estamos)
+
+* git checkout -b + rama"NOMBRE DEL USUARIO" (comando para crear rama) 
+
+* git checkout + "nombre de la rama" (comando para cambiar entre las diferentes ramas, por ejemplo: git checkout master, me lleva a la rama principal)
+
+* git merge + "nombre de la rama individual" (agrega los cambios a repo general)
+
+* git remote add origin + url del repositorio (comando para indicar a que servidor remoto se van a subir los cambios y desde donde se realizan esos cambios)
+
+* git push -u origin master (comando para subir nuestros cambios desde nuestra rama) 
+ACLARACION: el origen de la terminal puede aparecer nombrado de diferentes maneras, como master, main, etc., prestar atención en este punto
+
+* git push -u origin + "nombre de la rama" (comando para agregar rama al repo pero, sin merge)
+
+SI QUIERO CLONAR UN REPOSITORIO REMOTO A LOCAL
+
+* git clone + url del repo (comando para importar el repositorio a mi computadora, luego abria que crear la rama y todo lo demas)
+
+https://github.com/ElAlef/Sprint-1.git
+
+
